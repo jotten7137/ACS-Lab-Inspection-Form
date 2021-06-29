@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Lab Inspection Form</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+        <title>Lab Inspection Form</title>
+
+        <!--Dependencies-->
+        <!--External Stylesheets--> 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel='stylesheet' href="../static/css/SOP_Single_Form_Style.css">
+    
+    </head>
+  
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <!-- <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="SOP_Form.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <!-- <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li> -->
+            <!-- <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </li> -->
+            <!-- <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+            </li> -->
+            </ul>
+
+            <!-- Important - if you uncomment the search function, you have to update the 'app-SOP-form''s for loops  -->
+
+            <!-- <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form> -->
+        </div>
+        </nav>
+    </header>
+
+    <body>
+        <div class="container">
+        <!--Form-->
+        <form id="regForm">
+            <h3>Lab Inspection Form</h3>
+            
+            <!-- One tab for each step in the form -->
+            <!-- First Tab -->
+            <div class='tab'>
+                <!--Title, Doc#, Name-->
+                <div class= "form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputfirstname1">First Name</label>
+                        <p><input type="text" id="fname" placeholder="First Name" oninput="this.className=''" name="fname"></p>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputDoc1">Last Name</label>
+                        <p><input type="text" id="lname" placeholder="Last Name" oninput="this.className=''" name="lname"></p>
+                    </div>
+                </div>
+            
+
+                <!-- Location -->
+                <!-- <div class="form-row">
+                    <div class="col-md-3 mb-3">
+                        <label for="country">Country</label>
+                        <p><input type="text" id="Country" placeholder="Country" oninput="this.className=''" name="country" ></p>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="state">State</label>
+                        <p><input type="text" id="State" placeholder="State" oninput="this.className=''" name="state" ></p>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="city">City</label>
+                        <p><input type="text" id="City" placeholder="City" oninput="this.className=''" name="city" ></p>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="zip">Zip</label>
+                        <p><input type="text" id="Zip" placeholder="Zip Code" oninput="this.className=''" name="zip" ></p>
+                    </div>
+                </div> -->
+
+                <div class="form-row">
+                    <div class="form-group col-md-3 mb-3">
+                        <label for="Site">Site</label>
+                        <!-- <p><input type="text" id="site" placeholder="Site" oninput="this.className=''" name="site" ></p> -->
+                        <select id="business1" class="custom-select d-block w-100" oninput="this.className=''" name="site1">
+                            <option value="">Choose...</option>
+                            <option>Avon Lake HQ</option>
+                        </select>
+                    </div>
+                    <div class="form-goup col-md-3 mb-3">
+                        <label for="Building#">Building Number</label>
+                        <select id="business1" class="custom-select d-block w-100" oninput="this.className=''" name="build1">
+                            <option value="">Choose...</option>
+                            <option>416</option>
+                            <option>423</option>
+                        </select>
+                    </div>
+                </div>
+        
+                
+                <!-- Lab_Data -->
+                <!-- BU, Name, Room, etc... -->
+                <h4 class="mb-3">Lab Details</h4>
+                <div class="form-row">
+                    <div class="col-md-3 mb-3">
+                        <label for="business1" class="col-sm-3 col-form-label">Business Unit</label>
+                        <!-- <input type="text" id="business1" placeholder="Business Unit" oninput="this.className=''" name="business1"> -->
+                        <select id="business1" class="custom-select d-block w-100" oninput="this.className=''" name="business1">
+                            <option value="">Choose...</option>
+                            <option>Corporate Technology</option>
+                            <option>GSME</option> 
+                            <option>GCAI</option>
+                        </select>
+                    </div>
+
+                    <!--Change To Drop Down Menu-->
+                    <div class="col-md-3 mb-3">
+                        <label for="lab_name1" class="col-sm-3 col-form-label">Lab Name</label>
+                        <input type="text" id="lab_name1" placeholder="Lab Name" oninput="this.className=''" name="lab_name1"> 
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="room1" class="col-sm-3 col-form-label">Room #</label>
+                        <input type="text" id="room1" placeholder="Room" oninput="this.className=''" name="room1">
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="phone1" class="col-sm-3 col-form-label">Phone #</label>
+                        <input type="text" id="phone1" placeholder="Phone" oninput="this.className=''" name="phone1"> 
+                    </div>
+                </div>
+            </div>
+            
+             <!-- Training and Documentation Criteria _ Process Step 1 -->
+             <div class='tab'>
+            <p>Please review each item within the following checklist for a given lab.</p>
+
+                <!-- Table Creation -->
+                <table id='training_doc_table' class="insp_table">
+                <h4> Training and Documentation</h4>
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Question</th>
+                        <th scope="col">Yes</th>
+                        <th scope="col">No</th>
+                        <th scope="col">N/A</th>
+                        <th scope="col">Remarks/Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Are you working with high hazard material today and appropriate PPE is being used? </td>
+                        <td><label for="t1_q1_y"><input type="radio" name="t1_q1" id="t1_q1_y" value="YES" />YES</label></td>
+                        <td><label for="t1_q1_n"><input type="radio" name="t1_q1" id="t1_q1_n" value="NO" /> NO </label></td>
+                        <td><label for="t1_q1_na"><input type="radio" name="t1_q1" id="t1_q1_na" value="N/A" /> N/A </label></td>
+                        <td><input id="t1_q1_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t1_q1_Notes"></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Is PPE readily available and appropriate for lab space?</td>
+                        <td><label for="t1_q2_y"><input type="radio" name="t1_q2" id="t1_q2_y" value="YES" />YES</label></td>
+                        <td><label for="t1_q2_n"><input type="radio" name="t1_q2" id="t1_q2_n" value="NO" /> NO </label></td>
+                        <td><label for="t1_q2_na"><input type="radio" name="t1_q2" id="t1_q2_na" value="N/A" /> N/A </label></td>
+                        <td><input id="t1_q2_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t1_q2_Notes"></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Employee is able to describe and detect the presence or release of hazardous materials?</td>
+                        <td><label for="t1_q3_y"><input type="radio" name="t1_q3" id="t1_q3_y" value="YES" />YES</label></td>
+                        <td><label for="t1_q3_n"><input type="radio" name="t1_q3" id="t1_q3_n" value="NO" /> NO </label></td>
+                        <td><label for="t1_q3_na"><input type="radio" name="t1_q3" id="t1_q3_na" value="N/A" /> N/A </label></td>
+                        <td><input id="t1_q3_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t1_q3_Notes"></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Up-to-date inventory maintained for all hazardous materials?</td>
+                        <td><label for="t1_q4_y"><input type="radio" name="t1_q4" id="t1_q4_y" value="YES" />YES</label></td>
+                        <td><label for="t1_q4_n"><input type="radio" name="t1_q4" id="t1_q4_n" value="NO" /> NO </label></td>
+                        <td><label for="t1_q4_na"><input type="radio" name="t1_q4" id="t1_q4_na" value="N/A" /> N/A </label></td>
+                        <td><input id="t1_q4_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t1_q4_Notes"></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Up-to-date chemical inventory, correlated SDSs and related materials maintained and readily available?</td>
+                        <td><label for="t1_q5_y"><input type="radio" name="t1_q5" id="t1_q5_y" value="YES" />YES</label></td>
+                        <td><label for="t1_q5_n"><input type="radio" name="t1_q5" id="t1_q5_n" value="NO" /> NO </label></td>
+                        <td><label for="t1_q5_na"><input type="radio" name="t1_q5" id="t1_q5_na" value="N/A" /> N/A </label></td>
+                        <td><input id="t1_q5_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t1_q5_Notes"></td>
+                    </tr>
+                </tbody>
+                </table>
+                <!-- <button onclick="removeTable('inspection_table')">Remove Training Section</button>
+                <script type="text/javascript">
+                    function removeTable(id)
+                    {
+                        var tbl = document.getElementById(id);
+                        if(tbl) tbl.parentNode.removeChild(tbl);
+                    }
+                </script> -->
+            </div>
+
+            <!-- Spill and Emergency _ Process Step 2-->
+            <div class='tab'>
+            <p>Please review each item within the following checklist for a given lab.</p>
+                
+                <!-- Table Creation -->
+                <table id='spill_table' class="insp_table">
+                    <h4>Spill and Emergency Planning</h4>
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Question</th>
+                            <th scope="col">Yes</th>
+                            <th scope="col">No</th>
+                            <th scope="col">N/A</th>
+                            <th scope="col">Remarks/Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Employees familiar with the fire safety and building evacuation procedures including evacuation routes, nearest fire exits, fire alarm pull stations, and fire extinguishers?</td>
+                            <td><label for="t2_q1_y"><input type="radio" name="t2_q1" id="t2_q1_y" value="YES" />YES</label></td>
+                            <td><label for="t2_q1_n"><input type="radio" name="t2_q1" id="t2_q1_n" value="NO" /> NO </label></td>
+                            <td><label for="t2_q1_na"><input type="radio" name="t2_q1" id="t2_q1_na" value="N/A" /> N/A </label></td>
+                            <td><input id="t2_q1_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t2_q1_Notes"></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Emergency procedures and phone numbers clearly posted?</td>
+                            <td><label for="t2_q2_y"><input type="radio" name="t2_q2" id="t2_q2_y" value="YES" />YES</label></td>
+                            <td><label for="t2_q2_n"><input type="radio" name="t2_q2" id="t2_q2_n" value="NO" /> NO </label></td>
+                            <td><label for="t2_q2_na"><input type="radio" name="t2_q2" id="t2_q2_na" value="N/A" /> N/A </label></td>
+                            <td><input id="t2_q2_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t2_q2_Notes"></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>First aid materials readily available?</td>
+                            <td><label for="t2_q3_y"><input type="radio" name="t2_q3" id="t2_q3_y" value="YES" />YES</label></td>
+                            <td><label for="t2_q3_n"><input type="radio" name="t2_q3" id="t2_q3_n" value="NO" /> NO </label></td>
+                            <td><label for="t2_q3_na"><input type="radio" name="t2_q3" id="t2_q3_na" value="N/A" /> N/A </label></td>
+                            <td><input id="t2_q3_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t2_q3_Notes"></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Are any "antidotes" or special first aid materials required and available (e.g., Hydrofluoric Acid = Calcium Gluconate)?</td>
+                            <td><label for="t2_q4_y"><input type="radio" name="t2_q4" id="t2_q4_y" value="YES" />YES</label></td>
+                            <td><label for="t2_q4_n"><input type="radio" name="t2_q4" id="t2_q4_n" value="NO" /> NO </label></td>
+                            <td><label for="t2_q4_na"><input type="radio" name="t2_q4" id="t2_q4_na" value="N/A" /> N/A </label></td>
+                            <td><input id="t2_q4_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t2_q4_Notes"></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Are 'spill cleanup' materials available and laboratory staff familiar with their use?</td>
+                            <td><label for="t2_q5_y"><input type="radio" name="t2_q5" id="t2_q5_y" value="YES" />YES</label></td>
+                            <td><label for="t2_q5_n"><input type="radio" name="t2_q5" id="t2_q5_n" value="NO" /> NO </label></td>
+                            <td><label for="t2_q5_na"><input type="radio" name="t2_q5" id="t2_q5_na" value="N/A" /> N/A </label></td>
+                            <td><input id="t2_q5_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t2_q5_Notes"></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Safety shower and eye wash accessible within 10 seconds and unobstructed?</td>
+                            <td><label for="t2_q6_y"><input type="radio" name="t2_q6" id="t2_q6_y" value="YES" />YES</label></td>
+                            <td><label for="t2_q6_n"><input type="radio" name="t2_q6" id="t2_q6_n" value="NO" /> NO </label></td>
+                            <td><label for="t2_q6_na"><input type="radio" name="t2_q6" id="t2_q6_na" value="N/A" /> N/A </label></td>
+                            <td><input id="t2_q6_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t2_q6_Notes"></td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Safety shower tested, flushed and documented within past year?</td>
+                            <td><label for="t2_q7_y"><input type="radio" name="t2_q7" id="t2_q7_y" value="YES" />YES</label></td>
+                            <td><label for="t2_q7_n"><input type="radio" name="t2_q7" id="t2_q7_n" value="NO" /> NO </label></td>
+                            <td><label for="t2_q7_na"><input type="radio" name="t2_q7" id="t2_q7_na" value="N/A" /> N/A </label></td>
+                            <td><input id="t2_q7_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t2_q7_Notes"></td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Eyewash station tested, flushed and documented within past month?</td>
+                            <td><label for="t2_q8_y"><input type="radio" name="t2_q8" id="t2_q8_y" value="YES" />YES</label></td>
+                            <td><label for="t2_q8_n"><input type="radio" name="t2_q8" id="t2_q8_n" value="NO" /> NO </label></td>
+                            <td><label for="t2_q8_na"><input type="radio" name="t2_q8" id="t2_q8_na" value="N/A" /> N/A </label></td>
+                            <td><input id="t2_q8_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t2_q8_Notes"></td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Fire alarm, speakers and fire extinguishers are unobstructed and visible?</td>
+                            <td><label for="t2_q9_y"><input type="radio" name="t2_q9" id="t2_q9_y" value="YES" />YES</label></td>
+                            <td><label for="t2_q9_n"><input type="radio" name="t2_q9" id="t2_q9_n" value="NO" /> NO </label></td>
+                            <td><label for="t2_q9_na"><input type="radio" name="t2_q9" id="t2_q9_na" value="N/A" /> N/A </label></td>
+                            <td><input id="t2_q9_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t2_q9_Notes"></td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Exits are unobstructed and marked?</td>
+                            <td><label for="t2_q10_y"><input type="radio" name="t2_q10" id="t2_q10_y" value="YES" />YES</label></td>
+                            <td><label for="t2_q10_n"><input type="radio" name="t2_q10" id="t2_q10_n" value="NO" /> NO </label></td>
+                            <td><label for="t2_q10_na"><input type="radio" name="t2_q10" id="t2_q10_na" value="N/A" /> N/A </label></td>
+                            <td><input id="t2_q10_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t2_q10_Notes"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>  
+
+            <!-- Personal Protective Clothing, Equipment and Engineering Controls _ Process Step 3-->
+            <div class='tab'>
+            <p>Please review each item within the following checklist for a given lab.</p>
+                
+                <!-- Table Creation -->
+                <table id='PPE_table' class="insp_table">
+                    <h4>Personal Protective Clothing, Equipment and Engineering Controls</h4>
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Question</th>
+                            <th scope="col">Yes</th>
+                            <th scope="col">No</th>
+                            <th scope="col">N/A</th>
+                            <th scope="col">Remarks/Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Personnel wear shoes that fully cover feet and full length clothing to protect legs?</td>
+                            <td><label for="t3_q1_y"><input type="radio" name="t3_q1" id="t3_q1_y" value="YES" />YES</label></td>
+                            <td><label for="t3_q1_n"><input type="radio" name="t3_q1" id="t3_q1_n" value="NO" /> NO </label></td>
+                            <td><label for="t3_q1_na"><input type="radio" name="t3_q1" id="t3_q1_na" value="N/A" /> N/A </label></td>
+                            <td><input id="t3_q1_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t3_q1_Notes"></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Long hair confined? Jewelry, lanyards and other loose articles are confined or removed??</td>
+                            <td><label for="t3_q2_y"><input type="radio" name="t3_q2" id="t3_q2_y" value="YES" />YES</label></td>
+                            <td><label for="t3_q2_n"><input type="radio" name="t3_q2" id="t3_q2_n" value="NO" /> NO </label></td>
+                            <td><label for="t3_q2_na"><input type="radio" name="t3_q2" id="t3_q2_na" value="N/A" /> N/A </label></td>
+                            <td><input id="t3_q2_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t3_q2_Notes"></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Lab coats of appropriate material available and worn?</td>
+                            <td><label for="t3_q3_y"><input type="radio" name="t3_q3" id="t3_q3_y" value="YES" />YES</label></td>
+                            <td><label for="t3_q3_n"><input type="radio" name="t3_q3" id="t3_q3_n" value="NO" /> NO </label></td>
+                            <td><label for="t3_q3_na"><input type="radio" name="t3_q3" id="t3_q3_na" value="N/A" /> N/A </label></td>
+                            <td><input id="t3_q3_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t3_q3_Notes"></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Appropriate gloves available and worn?</td>
+                            <td><label for="t3_q4_y"><input type="radio" name="t3_q4" id="t3_q4_y" value="YES" />YES</label></td>
+                            <td><label for="t3_q4_n"><input type="radio" name="t3_q4" id="t3_q4_n" value="NO" /> NO </label></td>
+                            <td><label for="t3_q4_na"><input type="radio" name="t3_q4" id="t3_q4_na" value="N/A" /> N/A </label></td>
+                            <td><input id="t3_q4_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t3_q4_Notes"></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Is appropriate eye protection available and worn within the laboratory? (eg. goggles, face shields, safety glasses)?</td>
+                            <td><label for="t3_q5_y"><input type="radio" name="t3_q5" id="t3_q5_y" value="YES" />YES</label></td>
+                            <td><label for="t3_q5_n"><input type="radio" name="t3_q5" id="t3_q5_n" value="NO" /> NO </label></td>
+                            <td><label for="t3_q5_na"><input type="radio" name="t3_q5" id="t3_q5_na" value="N/A" /> N/A </label></td>
+                            <td><input id="t3_q5_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t3_q5_Notes"></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Are respirators or repiratory protection available and used in the laboratory?</td>
+                            <td><label for="t3_q6_y"><input type="radio" name="t3_q6" id="t3_q6_y" value="YES" />YES</label></td>
+                            <td><label for="t3_q6_n"><input type="radio" name="t3_q6" id="t3_q6_n" value="NO" /> NO </label></td>
+                            <td><label for="t3_q6_na"><input type="radio" name="t3_q6" id="t3_q6_na" value="N/A" /> N/A </label></td>
+                            <td><input id="q6_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t3_q6_Notes"></td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Chemical/Fume hood available?</td>
+                            <td><label for="t3_q7_y"><input type="radio" name="t3_q7" id="t3_q7_y" value="YES" />YES</label></td>
+                            <td><label for="t3_q7_n"><input type="radio" name="t3_q7" id="t3_q7_n" value="NO" /> NO </label></td>
+                            <td><label for="t3_q7_na"><input type="radio" name="t3_q7" id="t3_q7_na" value="N/A" /> N/A </label></td>
+                            <td><input id="t3_q7_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t3_q7_Notes"></td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Bloodborn Pathogen kit available?</td>
+                            <td><label for="t3_q8_y"><input type="radio" name="t3_q8" id="t3_q8_y" value="YES" />YES</label></td>
+                            <td><label for="t3_q8_n"><input type="radio" name="t3_q8" id="t3_q8_n" value="NO" /> NO </label></td>
+                            <td><label for="t3_q8_na"><input type="radio" name="t3_q8" id="t3_q8_na" value="N/A" /> N/A </label></td>
+                            <td><input id="t3_q8_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t3_q8_Notes"></td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Pipetting is mechanical or digital? (Mouth suction is unacceptable)</td>
+                            <td><label for="t3_q9_y"><input type="radio" name="t3_q9" id="t3_q9_y" value="YES" />YES</label></td>
+                            <td><label for="t3_q9_n"><input type="radio" name="t3_q9" id="t3_q9_n" value="NO" /> NO </label></td>
+                            <td><label for="t3_q9_na"><input type="radio" name="t3_q9" id="t3_q9_na" value="N/A" /> N/A </label></td>
+                            <td><input id="t3_q9_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t3_q9_Notes"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>  
+
+            <!-- Chem Safety _ Process Step 4 -->
+            <div class='tab'>
+            <p>Please review each item within the following checklist for a given lab.</p>
+            <p>Applicable to labs that use chemicals - if this does not apply, place N/A in the 'remarks/notes' boxes.</p>
+                
+                <!-- Table Creation -->
+                <table id='chem_safety_table' class="insp_table">
+                    <h4>Chemical Safety</h4>
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Question</th>
+                            <th scope="col">Yes</th>
+                            <th scope="col">No</th>
+                            <th scope="col">N/A</th>
+                            <th scope="col">Remarks/Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Appropriate labels are found on all hazardous chemical containers?</td>
+                            <td><label for="t4_q1_y"><input type="radio" name="t4_q1" id="t4_q1_y" value="YES" />YES</label></td>
+                            <td><label for="t4_q1_n"><input type="radio" name="t4_q1" id="t4_q1_n" value="NO" /> NO </label></td>
+                            <td><label for="t4_q1_na"><input type="radio" name="t4_q1" id="t4_q1_na" value="N/A" /> N/A </label></td>
+                            <td><input id="t4_q1_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t4_q1_Notes"></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Containers are in good condition (e.g., labels intact, metal cans free of rust) and closed when not in use?</td>
+                            <td><label for="t4_q2_y"><input type="radio" name="t4_q2" id="t4_q2_y" value="YES" />YES</label></td>
+                            <td><label for="t4_q2_n"><input type="radio" name="t4_q2" id="t4_q2_n" value="NO" /> NO </label></td>
+                            <td><label for="t4_q2_na"><input type="radio" name="t4_q2" id="t4_q2_na" value="N/A" /> N/A </label></td>
+                            <td><input id="t4_q2_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t4_q2_Notes"></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Containers properly segregated by hazard class (e.g., flammables away from oxidizers, acids separate from bases, incompatible acids separated)?</td>
+                            <td><label for="t4_q3_y"><input type="radio" name="t4_q3" id="t4_q3_y" value="YES" />YES</label></td>
+                            <td><label for="t4_q3_n"><input type="radio" name="t4_q3" id="t4_q3_n" value="NO" /> NO </label></td>
+                            <td><label for="t4_q3_na"><input type="radio" name="t4_q3" id="t4_q3_na" value="N/A" /> N/A </label></td>
+                            <td><input id="t4_q3_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t4_q3_Notes"></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Storage of chemicals above eye level is avoided?</td>
+                            <td><label for="t4_q4_y"><input type="radio" name="t4_q4" id="t4_q4_y" value="YES" />YES</label></td>
+                            <td><label for="t4_q4_n"><input type="radio" name="t4_q4" id="t4_q4_n" value="NO" /> NO </label></td>
+                            <td><label for="t4_q4_na"><input type="radio" name="t4_q4" id="t4_q4_na" value="N/A" /> N/A </label></td>
+                            <td><input id="t4_q4_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t4_q4_Notes"></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Flammable liquids stored in OSHA/NFPA approved cabinets and safety containers?</td>
+                            <td><label for="t4_q5_y"><input type="radio" name="t4_q5" id="t4_q5_y" value="YES" />YES</label></td>
+                            <td><label for="t4_q5_n"><input type="radio" name="t4_q5" id="t4_q5_n" value="NO" /> NO </label></td>
+                            <td><label for="t4_q5_na"><input type="radio" name="t4_q5" id="t4_q5_na" value="N/A" /> N/A </label></td>
+                            <td><input id="t4_q5_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t4_q5_Notes"></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Flammables liquids requiring refrigeration stored in either explosion proof or flammable resistant refrigerators and freezers (i.e., no regular refrigerators)?</td>
+                            <td><label for="t4_q6_y"><input type="radio" name="t4_q6" id="t4_q6_y" value="YES" />YES</label></td>
+                            <td><label for="t4_q6_n"><input type="radio" name="t4_q6" id="t4_q6_n" value="NO" /> NO </label></td>
+                            <td><label for="t4_q6_na"><input type="radio" name="t4_q6" id="t4_q6_na" value="N/A" /> N/A </label></td>
+                            <td><input id="t4_q6_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t4_q6_Notes"></td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Ignition sources avoided when using/storing flammables?</td>
+                            <td><label for="t4_q7_y"><input type="radio" name="t4_q7" id="t4_q7_y" value="YES" />YES</label></td>
+                            <td><label for="t4_q7_n"><input type="radio" name="t4_q7" id="t4_q7_n" value="NO" /> NO </label></td>
+                            <td><label for="t4_q7_na"><input type="radio" name="t4_q7" id="t4_q7_na" value="N/A" /> N/A </label></td>
+                            <td><input id="t4_q7_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t4_q7_Notes"></td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Corrosives stored in acid cabinets or other appropriate cabinets?</td>
+                            <td><label for="t4_q8_y"><input type="radio" name="t4_q8" id="t4_q8_y" value="YES" />YES</label></td>
+                            <td><label for="t4_q8_n"><input type="radio" name="t4_q8" id="t4_q8_n" value="NO" /> NO </label></td>
+                            <td><label for="t4_q8_na"><input type="radio" name="t4_q8" id="t4_q8_na" value="N/A" /> N/A </label></td>
+                            <td><input id="t4_q8_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t4_q8_Notes"></td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Peroxide formers properly labeled and inventory tracked?</td>
+                            <td><label for="t4_q9_y"><input type="radio" name="t4_q9" id="t4_q9_y" value="YES" />YES</label></td>
+                            <td><label for="t4_q9_n"><input type="radio" name="t4_q9" id="t4_q9_n" value="NO" /> NO </label></td>
+                            <td><label for="t4_q9_na"><input type="radio" name="t4_q9" id="t4_q9_na" value="N/A" /> N/A </label></td>
+                            <td><input id="t4_q9_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t4_q9_Notes"></td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Large containers (4L+) stored near the floor?</td>
+                            <td><label for="t4_q10_y"><input type="radio" name="t4_q10" id="t4_q10_y" value="YES" />YES</label></td>
+                            <td><label for="t4_q10_n"><input type="radio" name="t4_q10" id="t4_q10_n" value="NO" /> NO </label></td>
+                            <td><label for="t4_q10_na"><input type="radio" name="t4_q10" id="t4_q10_na" value="N/A" /> N/A </label></td>
+                            <td><input id="t4_q10_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t4_q10_Notes"></td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>Bottle carriers or carts utilized when transporting hazardous chemicals between work areas?</td>
+                            <td><label for="t4_q11_y"><input type="radio" name="t4_q11" id="t4_q11_y" value="YES" />YES</label></td>
+                            <td><label for="t4_q11_n"><input type="radio" name="t4_q11" id="t4_q11_n" value="NO" /> NO </label></td>
+                            <td><label for="t4_q11_na"><input type="radio" name="t4_q11" id="t4_q11_na" value="N/A" /> N/A </label></td>
+                            <td><input id="t4_q11_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t4_q11_Notes"></td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>Proper signs delineate designated areas where high hazard chemicals are used?</td>
+                            <td><label for="t4_q12_y"><input type="radio" name="t4_q12" id="t4_q12_y" value="YES" />YES</label></td>
+                            <td><label for="t4_q12_n"><input type="radio" name="t4_q12" id="t4_q12_n" value="NO" /> NO </label></td>
+                            <td><label for="t4_q12_na"><input type="radio" name="t4_q12" id="t4_q12_na" value="N/A" /> N/A </label></td>
+                            <td><input id="t4_q12_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t4_q12_Notes"></td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>Designated chemical work areas/bench tops cleaned and decontaminated?</td>
+                            <td><label for="t4_q13_y"><input type="radio" name="t4_q13" id="t4_q12_y" value="YES" />YES</label></td>
+                            <td><label for="t4_q13_n"><input type="radio" name="t4_q13" id="t4_q12_n" value="NO" /> NO </label></td>
+                            <td><label for="t4_q13_na"><input type="radio" name="t4_q13" id="t4_q12_na" value="N/A" /> N/A </label></td>
+                            <td><input id="t4_q13_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t4_q13_Notes"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>  
+
+            <!-- Compressed Gases _ Process Step 5 -->
+            <div class='tab'>
+                <p>Please review each item within the following checklist for a given lab.</p>
+                <p>Applicable to labs that use compressed gases - if this does not apply, place N/A in the 'remarks/notes' boxes.</p>
+                    
+                    <!-- Table Creation -->
+                    <table id='gas_table' class="insp_table">
+                        <h4>Compressed Gases</h4>
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Question</th>
+                                <th scope="col">Yes</th>
+                                <th scope="col">No</th>
+                                <th scope="col">N/A</th>
+                                <th scope="col">Remarks/Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Cylinders stored upright and properly secured at all times?</td>
+                                <td><label for="t5_q1_y"><input type="radio" name="t5_q1" id="t5_q1_y" value="YES" />YES</label></td>
+                                <td><label for="t5_q1_n"><input type="radio" name="t5_q1" id="t5_q1_n" value="NO" /> NO </label></td>
+                                <td><label for="t5_q1_na"><input type="radio" name="t5_q1" id="t5_q1_na" value="N/A" /> N/A </label></td>
+                                <td><input id="t5_q1_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t5_q1_Notes"></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Caps properly secured when cylinders are not in use??</td>
+                                <td><label for="t5_q2_y"><input type="radio" name="t5_q2" id="t5_q2_y" value="YES" />YES</label></td>
+                                <td><label for="t5_q2_n"><input type="radio" name="t5_q2" id="t5_q2_n" value="NO" /> NO </label></td>
+                                <td><label for="t5_q2_na"><input type="radio" name="t5_q2" id="t5_q2_na" value="N/A" /> N/A </label></td>
+                                <td><input id="t5_q2_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t5_q2_Notes"></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Regulators always used, proper regulators used for type gas, pressure bled when not in use??</td>
+                                <td><label for="t5_q3_y"><input type="radio" name="t5_q3" id="t5_q3_y" value="YES" />YES</label></td>
+                                <td><label for="t5_q3_n"><input type="radio" name="t5_q3" id="t5_q3_n" value="NO" /> NO </label></td>
+                                <td><label for="t5_q3_na"><input type="radio" name="t5_q3" id="t5_q3_na" value="N/A" /> N/A </label></td>
+                                <td><input id="t5_q3_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t5_q3_Notes"></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Cylinders in good condition and clearly marked?</td>
+                                <td><label for="t5_q4_y"><input type="radio" name="t5_q4" id="t5_q4_y" value="YES" />YES</label></td>
+                                <td><label for="t5_q4_n"><input type="radio" name="t5_q4" id="t5_q4_n" value="NO" /> NO </label></td>
+                                <td><label for="t5_q4_na"><input type="radio" name="t5_q4" id="t5_q4_na" value="N/A" /> N/A </label></td>
+                                <td><input id="t5_q4_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t5_q4_Notes"></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Flammables stored separately from oxidizers, toxics in secure area, etc.?</td>
+                                <td><label for="t5_q5_y"><input type="radio" name="t5_q5" id="t5_q5_y" value="YES" />YES</label></td>
+                                <td><label for="t5_q5_n"><input type="radio" name="t5_q5" id="t5_q5_n" value="NO" /> NO </label></td>
+                                <td><label for="t5_q5_na"><input type="radio" name="t5_q5" id="t5_q5_na" value="N/A" /> N/A </label></td>
+                                <td><input id="t5_q5_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t5_q5_Notes"></td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Cylinders of flammable gases stored in ventilated enclosures?</td>
+                                <td><label for="t5_q6_y"><input type="radio" name="t5_q6" id="t5_q6_y" value="YES" />YES</label></td>
+                                <td><label for="t5_q6_n"><input type="radio" name="t5_q6" id="t5_q6_n" value="NO" /> NO </label></td>
+                                <td><label for="t5_q6_na"><input type="radio" name="t5_q6" id="t5_q6_na" value="N/A" /> N/A </label></td>
+                                <td><input id="t5_q6_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t5_q6_Notes"></td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Cylinders moved on cylinder trucks with regulators removed and caps secured?</td>
+                                <td><label for="t5_q7_y"><input type="radio" name="t5_q7" id="t5_q7_y" value="YES" />YES</label></td>
+                                <td><label for="t5_q7_n"><input type="radio" name="t5_q7" id="t5_q7_n" value="NO" /> NO </label></td>
+                                <td><label for="t5_q7_na"><input type="radio" name="t5_q7" id="t5_q7_na" value="N/A" /> N/A </label></td>
+                                <td><input id="t5_q7_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t5_q7_Notes"></td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Cylinders of toxic gases (e.g., NFPA health hazard 3 or 4 and 2) stored and used in continuously ventilated enclosures?</td>
+                                <td><label for="t5_q8_y"><input type="radio" name="t5_q8" id="t5_q8_y" value="YES" />YES</label></td>
+                                <td><label for="t5_q8_n"><input type="radio" name="t5_q8" id="t5_q8_n" value="NO" /> NO </label></td>
+                                <td><label for="t5_q8_na"><input type="radio" name="t5_q8" id="t5_q8_na" value="N/A" /> N/A </label></td>
+                                <td><input id="t5_q8_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t5_q8_Notes"></td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>Cryogenic gas cylinder pressure relief values in proper working condition?</td>
+                                <td><label for="t5_q9_y"><input type="radio" name="t5_q9" id="t5_q9_y" value="YES" />YES</label></td>
+                                <td><label for="t5_q9_n"><input type="radio" name="t5_q9" id="t5_q9_n" value="NO" /> NO </label></td>
+                                <td><label for="t5_q9_na"><input type="radio" name="t5_q9" id="t5_q9_na" value="N/A" /> N/A </label></td>
+                                <td><input id="t5_q9_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t5_q9_Notes"></td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>Oxygen monitor available in areas with increased likelihood of oxygen deficient atmospheres?</td>
+                                <td><label for="t5_q10_y"><input type="radio" name="t5_q10" id="t5_q10_y" value="YES" />YES</label></td>
+                                <td><label for="t5_q10_n"><input type="radio" name="t5_q10" id="t5_q10_n" value="NO" /> NO </label></td>
+                                <td><label for="t5_q10_na"><input type="radio" name="t5_q10" id="t5_q10_na" value="N/A" /> N/A </label></td>
+                                <td><input id="t5_q10_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t5_q10_Notes"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </div> 
+                
+            <!-- Equipment and Physical Hazards _ Process Step 6 -->
+            <div class='tab'>
+                <p>Please review each item within the following checklist for a given lab.</p>
+                    
+                    <!-- Table Creation -->
+                    <table id='equipment_table' class="insp_table">
+                        <h4>Equipment and Physical Hazards</h4>
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Question</th>
+                                <th scope="col">Yes</th>
+                                <th scope="col">No</th>
+                                <th scope="col">N/A</th>
+                                <th scope="col">Remarks/Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Are equipment safety signs posted and in good condition?</td>
+                                <td><label for="t6_q1_y"><input type="radio" name="t6_q1" id="t6_q1_y" value="YES" />YES</label></td>
+                                <td><label for="t6_q1_n"><input type="radio" name="t6_q1" id="t6_q1_n" value="NO" /> NO </label></td>
+                                <td><label for="t6_q1_na"><input type="radio" name="t6_q1" id="t6_q1_na" value="N/A" /> N/A </label></td>
+                                <td><input id="t6_q1_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t6_q1_Notes"></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Are guards/shields in place and secured?</td>
+                                <td><label for="t6_q2_y"><input type="radio" name="t6_q2" id="t6_q2_y" value="YES" />YES</label></td>
+                                <td><label for="t6_q2_n"><input type="radio" name="t6_q2" id="t6_q2_n" value="NO" /> NO </label></td>
+                                <td><label for="t6_q2_na"><input type="radio" name="t6_q2" id="t6_q2_na" value="N/A" /> N/A </label></td>
+                                <td><input id="t6_q2_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t6_q2_Notes"></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Is equipment in good repair with evidence of proper maintenance?</td>
+                                <td><label for="t6_q3_y"><input type="radio" name="t6_q3" id="t6_q3_y" value="YES" />YES</label></td>
+                                <td><label for="t6_q3_n"><input type="radio" name="t6_q3" id="t6_q3_n" value="NO" /> NO </label></td>
+                                <td><label for="t6_q3_na"><input type="radio" name="t6_q3" id="t6_q3_na" value="N/A" /> N/A </label></td>
+                                <td><input id="t6_q3_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t6_q3_Notes"></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Are electrical cords in good condition, out of travel paths, and free of any cracks or breaks in insulation?</td>
+                                <td><label for="t6_q4_y"><input type="radio" name="t6_q4" id="t6_q4_y" value="YES" />YES</label></td>
+                                <td><label for="t6_q4_n"><input type="radio" name="t6_q4" id="t6_q4_n" value="NO" /> NO </label></td>
+                                <td><label for="t6_q4_na"><input type="radio" name="t6_q4" id="t6_q4_na" value="N/A" /> N/A </label></td>
+                                <td><input id="t6_q4_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t6_q4_Notes"></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Is proper PPE available and being used by equipment operators?</td>
+                                <td><label for="t6_q5_y"><input type="radio" name="t6_q5" id="t6_q5_y" value="YES" />YES</label></td>
+                                <td><label for="t6_q5_n"><input type="radio" name="t6_q5" id="t6_q5_n" value="NO" /> NO </label></td>
+                                <td><label for="t6_q5_na"><input type="radio" name="t6_q5" id="t6_q5_na" value="N/A" /> N/A </label></td>
+                                <td><input id="t6_q5_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t6_q5_Notes"></td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Is a tagging system in place to prevent use of damaged equipment?</td>
+                                <td><label for="t6_q6_y"><input type="radio" name="t6_q6" id="t6_q6_y" value="YES" />YES</label></td>
+                                <td><label for="t6_q6_n"><input type="radio" name="t6_q6" id="t6_q6_n" value="NO" /> NO </label></td>
+                                <td><label for="t6_q6_na"><input type="radio" name="t6_q6" id="t6_q6_na" value="N/A" /> N/A </label></td>
+                                <td><input id="t6_q6_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t6_q6_Notes"></td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Is access to the equipment restricted?</td>
+                                <td><label for="t6_q7_y"><input type="radio" name="t6_q7" id="t6_q7_y" value="YES" />YES</label></td>
+                                <td><label for="t6_q7_n"><input type="radio" name="t6_q7" id="t6_q7_n" value="NO" /> NO </label></td>
+                                <td><label for="t6_q7_na"><input type="radio" name="t6_q7" id="t6_q7_na" value="N/A" /> N/A </label></td>
+                                <td><input id="t6_q7_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t6_q7_Notes"></td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Have all users been trained to operate this equipment?</td>
+                                <td><label for="t6_q8_y"><input type="radio" name="t6_q8" id="t6_q8_y" value="YES" />YES</label></td>
+                                <td><label for="t6_q8_n"><input type="radio" name="t6_q8" id="t6_q8_n" value="NO" /> NO </label></td>
+                                <td><label for="t6_q8_na"><input type="radio" name="t6_q8" id="t6_q8_na" value="N/A" /> N/A </label></td>
+                                <td><input id="t6_q8_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t6_q8_Notes"></td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>Have there been any modifications to the equipment?</td>
+                                <td><label for="t6_q9_y"><input type="radio" name="t6_q9" id="t6_q9_y" value="YES" />YES</label></td>
+                                <td><label for="t6_q9_n"><input type="radio" name="t6_q9" id="t6_q9_n" value="NO" /> NO </label></td>
+                                <td><label for="t6_q9_na"><input type="radio" name="t6_q9" id="t6_q9_na" value="N/A" /> N/A </label></td>
+                                <td><input id="t6_q9_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t6_q9_Notes"></td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>Are there any additional or new hazards present around the equipment? If yes - please list in the note box</td>
+                                <td><label for="t6_q10_y"><input type="radio" name="t6_q10" id="t6_q10_y" value="YES" />YES</label></td>
+                                <td><label for="t6_q10_n"><input type="radio" name="t6_q10" id="t6_q10_n" value="NO" /> NO </label></td>
+                                <td><label for="t6_q10_na"><input type="radio" name="t6_q10" id="t6_q10_na" value="N/A" /> N/A </label></td>
+                                <td><input id="t6_q10_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t6_q10_Notes"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </div>
+            
+            <!-- General _ Process Step 6 -->
+            <div class='tab'>
+                <p>Please review each item within the following checklist for a given lab.</p>
+                    
+                    <!-- Table Creation -->
+                    <table id='equipment_table' class="insp_table">
+                        <h4>General Safety</h4>
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Question</th>
+                                <th scope="col">Yes</th>
+                                <th scope="col">No</th>
+                                <th scope="col">N/A</th>
+                                <th scope="col">Remarks/Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Lab is secure when door is locked and no one is in the lab?</td>
+                                <td><label for="t7_q1_y"><input type="radio" name="t7_q1" id="t7_q1_y" value="YES" />YES</label></td>
+                                <td><label for="t7_q1_n"><input type="radio" name="t7_q1" id="t7_q1_n" value="NO" /> NO </label></td>
+                                <td><label for="t7_q1_na"><input type="radio" name="t7_q1" id="t7_q1_na" value="N/A" /> N/A </label></td>
+                                <td><input id="t7_q1_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t7_q1_Notes"></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Appropriate warning signs posted near lab entrance?</td>
+                                <td><label for="t7_q2_y"><input type="radio" name="t7_q2" id="t7_q2_y" value="YES" />YES</label></td>
+                                <td><label for="t7_q2_n"><input type="radio" name="t7_q2" id="t7_q2_n" value="NO" /> NO </label></td>
+                                <td><label for="t7_q2_na"><input type="radio" name="t7_q2" id="t7_q2_na" value="N/A" /> N/A </label></td>
+                                <td><input id="t7_q2_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t7_q2_Notes"></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Unobstructed aisles maintained at least 36in. wide throughout work space?</td>
+                                <td><label for="t7_q3_y"><input type="radio" name="t7_q3" id="t7_q3_y" value="YES" />YES</label></td>
+                                <td><label for="t7_q3_n"><input type="radio" name="t7_q3" id="t7_q3_n" value="NO" /> NO </label></td>
+                                <td><label for="t7_q3_na"><input type="radio" name="t7_q3" id="t7_q3_na" value="N/A" /> N/A </label></td>
+                                <td><input id="t7_q3_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t7_q3_Notes"></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Lab benches and work areas are free of clutter?</td>
+                                <td><label for="t7_q4_y"><input type="radio" name="t7_q4" id="t7_q4_y" value="YES" />YES</label></td>
+                                <td><label for="t7_q4_n"><input type="radio" name="t7_q4" id="t7_q4_n" value="NO" /> NO </label></td>
+                                <td><label for="t7_q4_na"><input type="radio" name="t7_q4" id="t7_q4_na" value="N/A" /> N/A </label></td>
+                                <td><input id="t7_q4_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t7_q4_Notes"></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Shelves and cabinets in good condition? </td>
+                                <td><label for="t7_q5_y"><input type="radio" name="t7_q5" id="t7_q5_y" value="YES" />YES</label></td>
+                                <td><label for="t7_q5_n"><input type="radio" name="t7_q5" id="t7_q5_n" value="NO" /> NO </label></td>
+                                <td><label for="t7_q5_na"><input type="radio" name="t7_q5" id="t7_q5_na" value="N/A" /> N/A </label></td>
+                                <td><input id="t7_q5_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t7_q5_Notes"></td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Shelves and Cabinets have seismic restraints (eg. lips or wires) and secured to walls?</td>
+                                <td><label for="t7_q6_y"><input type="radio" name="t7_q6" id="t7_q6_y" value="YES" />YES</label></td>
+                                <td><label for="t7_q6_n"><input type="radio" name="t7_q6" id="t7_q6_n" value="NO" /> NO </label></td>
+                                <td><label for="t7_q6_na"><input type="radio" name="t7_q6" id="t7_q6_na" value="N/A" /> N/A </label></td>
+                                <td><input id="t7_q6_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t7_q6_Notes"></td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Flooring is in good condition? (free of cracks, holes and tripping hazards)</td>
+                                <td><label for="t7_q7_y"><input type="radio" name="t7_q7" id="t7_q7_y" value="YES" />YES</label></td>
+                                <td><label for="t7_q7_n"><input type="radio" name="t7_q7" id="t7_q7_n" value="NO" /> NO </label></td>
+                                <td><label for="t7_q7_na"><input type="radio" name="t7_q7" id="t7_q7_na" value="N/A" /> N/A </label></td>
+                                <td><input id="t7_q7_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t7_q7_Notes"></td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Storage above eye level is minimized and items are restrained from falling?</td>
+                                <td><label for="t7_q8_y"><input type="radio" name="t7_q8" id="t7_q8_y" value="YES" />YES</label></td>
+                                <td><label for="t7_q8_n"><input type="radio" name="t7_q8" id="t7_q8_n" value="NO" /> NO </label></td>
+                                <td><label for="t7_q8_na"><input type="radio" name="t7_q8" id="t7_q8_na" value="N/A" /> N/A </label></td>
+                                <td><input id="t7_q8_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t7_q8_Notes"></td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>Refrigerators and freezers clearly marked as 'Not for Storage of Food for Human Consumption'?</td>
+                                <td><label for="t7_q9_y"><input type="radio" name="t7_q9" id="t7_q9_y" value="YES" />YES</label></td>
+                                <td><label for="t7_q9_n"><input type="radio" name="t7_q9" id="t7_q9_n" value="NO" /> NO </label></td>
+                                <td><label for="t7_q9_na"><input type="radio" name="t7_q9" id="t7_q9_na" value="N/A" /> N/A </label></td>
+                                <td><input id="t7_q9_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t7_q9_Notes"></td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>Refrigerators and/or freezers are free of food and drink? (unless dedicated for such purposes)</td>
+                                <td><label for="t7_q10_y"><input type="radio" name="t7_q10" id="t7_q10_y" value="YES" />YES</label></td>
+                                <td><label for="t7_q10_n"><input type="radio" name="t7_q10" id="t7_q10_n" value="NO" /> NO </label></td>
+                                <td><label for="t7_q10_na"><input type="radio" name="t7_q10" id="t7_q10_na" value="N/A" /> N/A </label></td>
+                                <td><input id="t7_q10_Notes" placeholder="Remarks / Notes" rows="1" oninput="this.className = ''" name="t7_q10_Notes"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </div> 
+
+            <!-- Next, Previous Buttons -->
+            <div style="overflow:auto;">
+                <div style="float:right;">
+                    <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                    <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                </div>
+            </div>
+            <!-- Process Progress Circles at bottom of page -->
+            <!-- 10 for each step, +1 for iterative purposes-->
+            <div style="text-align:center;margin-top:40px;">
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <!-- <span class="step"></span> -->
+            </div>
+        </form>
+    </div>
+
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+        <script src="../dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../static/js/app_form.js"></script>
+        <script src="../static/js/fire_ext_table.js"></script>
+        <script src="../static/js/chem_safety_shower_table.js"></script>
+        
+        <!-- <script src="../static/js/data_collection.js"></script> -->
+    </body>   
+</html>
